@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>Author details and their book</h2> -->
+ 
+    <!-- <h2>Author book</h2> -->
+    <h1>Author Name:<%= showauthor.name %> </h1>
+    <ol>
+        <%  for(let show of showauthor.books){%>
+            <li>  <b><%=  show.title%> </b> 
+                
+                <p>Book description:<%= show.bookdesc %> </p>
+                <p>Book Genre:<%= show.genres %> </p>
+            
+            </li>
+              
+        <%}%>
+    </ol>
+  
+    <a href="/author/<%=showauthor._id%>/books/new">Add new book</a> 
+    <a href="/author">find Author</a>
+</body>
+</html>
